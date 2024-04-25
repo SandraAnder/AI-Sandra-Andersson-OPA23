@@ -164,3 +164,4 @@ ml-latest
 cardio_train.csv
 test_samples.csv
 svm_model.pkl
+prediction.csv

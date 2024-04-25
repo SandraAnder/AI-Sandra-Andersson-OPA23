@@ -15,10 +15,11 @@ except FileNotFoundError as e:
     print("Filen kunde inte hittas:", e)
 
 # Gör prediktioner på de 100 datapunkterna
-predictions = model.predict(test_samples)
+# Gör prediktioner på de 100 datapunkterna
+predictions = model.predict(test_samples.drop('cardio', axis=1))
 
 # Beräknar sannolikheterna för varje klass
-probabilities = model.predict_proba(test_samples)
+probabilities = model.predict_proba(test_samples.drop('cardio', axis=1))
 probability_class_0 = probabilities[:, 0]
 probability_class_1 = probabilities[:, 1]
 
@@ -30,4 +31,4 @@ prediction_df = pd.DataFrame({
 })
 
 # Exporterar DataFramen till en CSV-fil
-prediction_df.to_csv('data/prediction.csv', index=False)
+prediction_df.to_csv('labs/Lab1/data/prediction.csv', index=False)
