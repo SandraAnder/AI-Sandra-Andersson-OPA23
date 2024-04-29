@@ -165,3 +165,7 @@ cardio_train.csv
 test_samples.csv
 svm_model.pkl
 prediction.csv
+
+experiment_small_data
+experiment_tiny_data
+original_data
