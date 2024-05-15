@@ -169,3 +169,7 @@ prediction.csv
 experiment_small_data
 experiment_tiny_data
 original_data
+
+labels.npy
+resized_images.npy
+x
